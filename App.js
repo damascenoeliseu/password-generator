@@ -9,7 +9,7 @@ import {
 import Slider from '@react-native-community/slider';
 import Clipboard from 'expo-clipboard';
 
-let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?;@#$%&*()';
 
 export default function App() {
   const [password, setPassword] = useState('');
@@ -32,19 +32,19 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image
-        source={require('./src/assets/logo.png')}
+        source={require('./src/assets/padlock-logo.png')}
         style={styles.logo}
       />
 
-      <Text style={styles.title}>{size} Caracters</Text>
+      <Text style={styles.title}>{size} Characters</Text>
 
       <View style={styles.area}>
         <Slider
-          style={{ height: 50 }}
+          style={{ height: 50}}
           minimumValue={5}
           maximumValue={15}
           minimumTrackTintColor='#ff0000'
-          maximumTrackTintColor='#000'
+          maximumTrackTintColor='#147c14'
           value={size}
           onValueChange={(value) => setSize(value.toFixed(0))}
         />
@@ -77,7 +77,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f3f3f3',
   },
   logo: {
-    marginBottom: 60,
+    width: 160,
+    height: 210,
+    marginBottom: 20,
   },
   title: {
     fontSize: 30,
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: 7
   },
   button: {
-    backgroundColor: '#ffa200',
+    backgroundColor: '#147c14',
     width: '80%',
     height: 50,
     alignItems: 'center',
