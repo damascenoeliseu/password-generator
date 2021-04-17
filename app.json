@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "gerador",
-    "slug": "gerador",
+    "name": "password-generator",
+    "slug": "password-generator",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
